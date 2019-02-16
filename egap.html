@@ -1,6 +1,20 @@
 <html>
   <head>
-    <title> git page... :o </title>
+    <title> git page... v1 </title>
+			<script>
+        var bkm = {};
+        function http_get (url) {
+  				var xhttp = new XMLHttpRequest();
+  				xhttp.onreadystatechange = function() {
+  				  if (this.readyState == 4 && this.status == 200) {
+  				    bkm = xhttp.responseText;
+  				  }
+  				};
+  				xhttp.open("GET", url, true);
+  				xhttp.send();
+        }
+			</script>
+
 
   </head>
   <body>
