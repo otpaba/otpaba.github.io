@@ -3,13 +3,15 @@
   <head>
     <title> git page... v1 </title>
       <script>
-       var bkm = {};
-         function http_get (url) {
-           var xhttp = new XMLHttpRequest();
-           xhttp.onreadystatechange = function() {
-           if (this.readyState == 4 && this.status == 200) {
-             bkm = xhttp.responseText;
-           }
+        var bkm = {};
+        var url = 'https://otpaba.github.com/egap.json';
+          function http_get (url) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              bkm = xhttp.responseText;
+              document.getElementById("x").innerHTML = bkm;
+            }
           };
           xhttp.open("GET", url, true);
           xhttp.send();
@@ -17,10 +19,8 @@
       </script>
 
   </head>
-  <body onload="http_get('https://otpaba.github.com/egap.json')">
+  <body>
     <p id="x"></p>
-    <script>
-      document.getElementById("x").innerHTML = bkm;
     </script>
   </body>
 </html>
